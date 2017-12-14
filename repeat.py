@@ -9,7 +9,7 @@ outputname = input("What would you like to call the output? ")+".txt"
 now = datetime.datetime.now().strftime("%Y-%m-%d ")+outputname
 type(name)
 
-lines_seen = set() 														# holds lines already seen
+lines_seen = set() 	# holds lines already seen
 outfile = open(now, "w+")
 
 #f=open(name, "a")
@@ -17,7 +17,7 @@ outfile = open(now, "w+")
 #	f.write("")
 
 for line in open (name, "r", encoding='ascii'):
-	if line not in lines_seen:											# not a duplicate
+	if line not in lines_seen:	# not a duplicate
 		outfile.write(line)
 		lines_seen.add(line)
 outfile.close()
